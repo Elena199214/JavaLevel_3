@@ -1,7 +1,20 @@
 package HomeWork_1.BoxFruit;
 
-abstract public class Fruit {
-    private float WEIGHT;
+import java.lang.reflect.Type;
 
-    public abstract float getWEIGHT();
+abstract public class Fruit {
+    private float weight;
+
+
+    public Fruit(float weight) {
+        this.weight = weight;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+
+
+
 }
