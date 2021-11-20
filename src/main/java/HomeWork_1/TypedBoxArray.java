@@ -14,22 +14,32 @@ public class TypedBoxArray<T> {
     }
 
     public T[] swapIndex(int index1, int index2) throws ArrayIndexOutOfBoundsException {
+        T object;
+        object = array[index1];
+        array[index1] = array[index2];
+        array[index2] = object;
+        System.out.println(Arrays.toString(array));
+        return array;
+    }
 
+    public void swapValue( T value1, T value2) {
 
-        T object ;
-        for (int i = 0; i < array.length; i++) {
-
-            if (i == index1) {
-                object = array[i];
-                array[i] = array[index2];
-                array[index2] = object;
+            List<T> myArrayList = new ArrayList<>();
+            Collections.addAll(myArrayList, array);
+            if((myArrayList.contains(value1)) && (myArrayList.contains(value2))){
+                T object;
+                int index1;
+                int index2;
+                index1 = myArrayList.indexOf(value1);
+                object = array[index1];
+                index2 = myArrayList.indexOf(value2);
+                array[index1]= array[index2];
+                array[index2]= object;
+                System.out.println(Arrays.toString(array));
             }
+else {
+       System.out.println("В массиве нет элемента с таким значением");}
 
-            System.out.println(Arrays.toString(array));
-            return array;
-
-        }
-        return null;
     }
 
     public List<T> arrayTransformInList() {
@@ -40,33 +50,6 @@ public class TypedBoxArray<T> {
 
 }
 
-
-
-
-//    public T[] swapElements(T value1, T value2) {
-//
-//        for (int i = 0; i < array.length; i++) {
-//
-//            int index = 0;
-//
-//            if (array[i].equals(value1)) {
-//                index = i;
-//
-//                for (a:array){
-//                    array.equals(value2);
-//                        array[i] = value1;
-//                        array[index] = value2;
-//                    }
-//                }
-//            }
-//            if (array[i].equals(value2))
-//                array[i] = value1;
-//            array[index] = value2;
-//        }
-//            System.out.println(Arrays.toString(array));
-//            return array;
-
-//        }
 
 
 

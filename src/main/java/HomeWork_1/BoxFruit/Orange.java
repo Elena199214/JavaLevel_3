@@ -1,16 +1,12 @@
 package HomeWork_1.BoxFruit;
 
 public class Orange extends Fruit  {
-    private float weight = 1.1f;
-
-    public Orange(float weight) {
-        super(weight);
-    }
+    private static final float WEIGHT = 1.5f;
 
 
     @Override
     public float getWeight() {
-        return weight;
+        return WEIGHT;
     }
     }
 
